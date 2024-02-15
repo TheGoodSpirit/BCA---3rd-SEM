@@ -7,7 +7,7 @@ This repository is dedicated to providing comprehensive notes for students pursu
 	This section encompasses fundamental concepts of data structures such as arrays, linked lists, stacks, queues, trees, graphs, sorting, and searching algorithms. 
 	Detailed explanations, visual aids, and code examples will be included to aid understanding and implementation.
 
-   ##OOP in Java: 
+   #OOP in Java: 
 
 	Object-Oriented Programming (OOP) principles and practices will be explored in the context of Java programming language. 
 	Topics will include classes, objects, inheritance, polymorphism, encapsulation, and abstraction. 
