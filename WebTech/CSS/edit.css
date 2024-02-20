@@ -1,7 +1,25 @@
-head,
+/* head,
 style {
     display: block;
 }
 style {
+  height: 100vh;
   white-space: pre;
+}
+html {
+  display: flex;
+} */
+h1 {
+  color: white;
+  text-align: center;
+}
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+/* div ~ a {
+  color: brown;
+} */
+div p + abbr {
+  background-color: blueviolet;
 }
