@@ -54,7 +54,7 @@ section {
     align-items: center;
     justify-content: center;
     background-color: #000;
-    background: url("../Images/home-bg.jpg");
+    background: url("../Images/rose-165819_1280.jpg");
     background-position: center;
     background-size: cover;
     /* background-attachment: fixed; */
@@ -122,4 +122,27 @@ section {
 }
 .links:hover:before {
   width: 100%;
+}
+
+
+/* GALLERY */
+.box {
+  gap: 40px;
+  width: 100%;
+  display: flex;
+  padding: 50px 50px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.gallery-card {
+  max-width: 30%;
+}
+img {
+  width:100%;
+  border-radius: 20px;
+}
+img:hover {
+  transform: scale(1.1);
+  transition: 0.25s;
 }
