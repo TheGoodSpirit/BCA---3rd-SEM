@@ -1,29 +1,26 @@
 package com.Run_Main;
-import java.util.Scanner;
 
-// importing other packages
-import com.greet.*;
-import com.simple_Interest.*;
-import com.method_overloading.*;
-import com.method_overriding.*;
+//importing other packages
+import java.util.Scanner;
 import com.simple_Interest.*;
 import com.Area.*;
+import com.Voting_Sys.*;
 
 public class Run_Main {
 	public static void main(String[] args) {
-		
-		// Scanner initialization
+		@SuppressWarnings("resource")
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("========== OPTION ==========");
 		System.out.println("1. Simple Interest");
-		System.out.println("2. Area\n");
+		System.out.println("2. Area");
+		System.out.println("3. Voting Validation System\n");
 		
 		
 		// option
 		System.out.print("\nEnter the option : ");
 		int op = scan.nextInt();
-		
+	
 		switch(op) {
 			case 1:
 				// ==================== Simple Interest ====================
@@ -37,7 +34,7 @@ public class Run_Main {
 				// for rate
 				System.out.print("Enter the rate: ");
 				float r = scan.nextFloat();
-				SimpleInterest _SI = new SimpleInterest(p, t, r);
+				new SimpleInterest(p, t, r);
 				break;
 			
 			case 2:
@@ -54,6 +51,14 @@ public class Run_Main {
 				area.calculate();
 				area.display();
 				break;
+			
+			case 3:
+				System.out.println("\n========== Voting Validation System ==========\n");
+				System.out.print("Enter your age : ");
+				int age = scan.nextInt();
+				new VotingSystem(age).check();
+				break;
+				
 		}
 	}
 }
