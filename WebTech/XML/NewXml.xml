@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE college SYSTEM "NewXml.dtd">
+<college xmlns:c9 = "https://example.com.np" xmlns:c10 = "https://example.com.np">
+    <name> Butwal Kalika Campus </name>
+    <address> Butwal-11, Ramnagar, Rupandehi</address>
+    <c9:student>
+        <firstName> Manish </firstName>
+        <lastName> Ghimire </lastName>
+        <contact> 9800000000 </contact>
+        <email> manishghimire@gmail.com </email>
+        <address> Devinagar </address>
+    </c9:student>
+
+    <c10:student>
+        <firstName> Manish </firstName>
+        <lastName> Ghimire </lastName>
+        <contact> 9800000000 </contact>
+        <email> manishghimire@gmail.com </email>
+        <address> Devinagar </address>
+    </c10:student>
+
+</college>

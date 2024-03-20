@@ -27,4 +27,6 @@ public class ExceptionHandling {
 		}	
 		NullPointerException(null);
 	}
+	
+	// throws and finally remaining
 }
