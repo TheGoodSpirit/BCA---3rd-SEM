@@ -1,7 +1,8 @@
 package com.Abs_win_toolkit;
 
-import java.util.EventListener;
 import java.awt.*;
+import java.awt.event.*;
+import java.util.Scanner;
 
 public class TemperatureConversion {
     
@@ -30,8 +31,6 @@ public class TemperatureConversion {
         
         createLabel(frame, "Fahrenheit");
         createTxtField(frame, 20);
-        
-        createButton(frame, "Submit");
     }
     
     public void createLabel(Frame frame, String labelName) {
@@ -39,11 +38,32 @@ public class TemperatureConversion {
     }
     
     public void createTxtField(Frame frame, int size) {
-        frame.add(new TextField(size));
+        TextField  field = new TextField(size);
+        frame.add(field); 
+        createButton(frame, "Enter", field);
     }
     
-    public void createButton(Frame frame, String btnName) {
-        frame.add(new Button(btnName));
+    public void createButton(Frame frame, String btnName, TextField field) {
+        Button submitbtn = new Button(btnName);
+        submitbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(Integer.parseInt(field.getText()));
+            }
+        });
+        frame.add(submitbtn);
     }
     
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        // ========== Tep4reatureConversion (AWT) ==========
+        System.out.println("\n========== TepreatureConversion (AWT) ==========\n");
+        System.out.print("Enter the width of the frame: ");
+        int width = scan.nextInt();
+        System.out.print("Enter the height of the frame: ");
+        int height = scan.nextInt();
+        new TemperatureConversion(width, height).createFrame();
+    }
 }

@@ -19,11 +19,11 @@ public class Run_Main {
         System.out.println("4. Temperature Conversion (AWT)\n");
 
 
-//        // option
-//        System.out.print("\nEnter the option : ");
-//        int op = scan.nextInt();
+        // option
+        System.out.print("\nEnter the option : ");
+        int op = scan.nextInt();
 
-        switch(4) {
+        switch(op) {
             case 1:
                 // ==================== Simple Interest ====================
                 System.out.println("\n========== Simple Interest ==========");
@@ -66,10 +66,10 @@ public class Run_Main {
             case 4:
                 // ========== Tep4reatureConversion (AWT) ==========
                 System.out.println("\n========== TepreatureConversion (AWT) ==========\n");
-//                System.out.print("Enter the width of the frame: ");
-//                int width = scan.nextInt();
-//                System.out.print("Enter the height of the frame: ");
-//                int height = scan.nextInt();
+                System.out.print("Enter the width of the frame: ");
+                int width = scan.nextInt();
+                System.out.print("Enter the height of the frame: ");
+                int height = scan.nextInt();
                 new TemperatureConversion(300, 200).createFrame();
         }
     }
