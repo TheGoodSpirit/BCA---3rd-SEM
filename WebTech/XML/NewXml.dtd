@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!ELEMENT college (student+,name+,firstName+,lastName+,contact+,email+,address+) >
-<!ELEMENT firstName (#PCDATA)>
-<!ELEMENT lastName (#PCDATA)>
-<!ELEMENT contact (#PCDATA)>
-<!ELEMENT email (#PCDATA)>
-<!ELEMENT address (#PCDATA)>

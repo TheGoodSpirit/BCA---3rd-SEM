@@ -1,0 +1,10 @@
+
+<!ELEMENT college (name,address,student)>
+<!ELEMENT student (Id,name,age,department,email,address)>
+<!ELEMENT Id (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT department (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ATTLIST Id id CDATA #REQUIRED "123">

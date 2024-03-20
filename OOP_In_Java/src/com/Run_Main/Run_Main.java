@@ -70,7 +70,7 @@ public class Run_Main {
 //                int width = scan.nextInt();
 //                System.out.print("Enter the height of the frame: ");
 //                int height = scan.nextInt();
-                new TemperatureConversion(200, 250).createFrame();
+                new TemperatureConversion(300, 200).createFrame();
         }
     }
 }
