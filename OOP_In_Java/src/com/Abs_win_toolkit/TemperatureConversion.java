@@ -5,7 +5,7 @@ import java.awt.*;
 public class TemperatureConversion {
     
     // properties
-    private int _width, _height;
+    private static int _width, _height;
     
     public TemperatureConversion(int width, int height) {
         if(width <= 0 || height <= 0) {
@@ -13,35 +13,20 @@ public class TemperatureConversion {
         } else {
             this._width = width;
             this._height = height;
+            createFrame();
         } 
     }
     
-    public void createFrame() {
-        
+    public static void createFrame() {
         Frame frame = new Frame();
-        
         frame.setSize(_width, _height);
         frame.setVisible(true);
         frame.setLayout(new FlowLayout());
-        
-        createLabel(frame, "Celcius");
-        createTxtField(frame, 20);
-        
-        createLabel(frame, "Fahrenheit");
-        createTxtField(frame, 20);
-        
-        createButton(frame, "Submit");
+        frame.add(new Label("Celcius"));
+        frame.add(new TextField(16));
     }
-    
-    public void createLabel(Frame frame, String labelName) {
-        frame.add(new Label(labelName));
-    }
-    
-    public void createTxtField(Frame frame, int size) {
-        frame.add(new TextField(size));
-    }
-    
-    public void createButton(Frame frame, String btnName) {
-        frame.add(new Button(btnName));
+
+    public static void  close() {
+        System.exit(0 );
     }
 }
