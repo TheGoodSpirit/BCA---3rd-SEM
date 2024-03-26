@@ -1,60 +1,94 @@
 package com.Abs_win_toolkit;
 
-import java.awt.*;
+import java.awt.FlowLayout;
 import java.awt.event.*;
-import java.util.Scanner;
+import javax.swing.*;
 
-public class TemperatureConversion {
+class TemperatureConversion {
     
-    // properties
-    private int _width, _height;
+    // Convert utton
+    private final JButton _convertBtn;
     
-    public TemperatureConversion(int width, int height) {
-        if(width <= 0 || height <= 0) {
-            System.out.println("Error: \"width\" or \"height\" cannot be equal or less than zero .TRY AGAIN!");
-        } else {
-            this._width = width;
-            this._height = height;
-        } 
-    }
+    // declaring Labels
+    private final JLabel _optionLabel;
+    private final JLabel _celciusLabel; 
+    private final  JLabel _fahrenheitLabel;
     
-    public void createFrame() {
+    // declaring TextFields
+    private final  JTextField _optionTextField;
+    private final  JTextField _celciusTextField;
+    private final JTextField _fahrenheitTextField;
+    
+    // Defining constant values
+    private final int _WIDTH = 350;
+    private final int _HEIGHT = 250;
+    private final int _OFFSET = 32;
+    private final double _toCelcius = 5/9;
+    private final double _toFahrenheit = 9/5;
+    
+    // Constructor
+    public TemperatureConversion() {
         
-        Frame frame = new Frame();
+        JFrame container = new JFrame("TemperatureConversion");
+        container.setSize(_WIDTH,_HEIGHT);
+        container.setLayout(new FlowLayout());
         
+<<<<<<< HEAD
         frame.setSize(_width, _height);
         frame.setVisible(true);
         frame.setTitle("TemperatureConversion");
         frame.setLayout(new FlowLayout());
+=======
+        _celciusLabel = new JLabel("Celcius : ");
+        _celciusTextField = new JTextField(5);
+        _celciusTextField.setText("32");
+>>>>>>> b9f3db9d835ae5b361373638c6e4ea2702878ec1
         
-        createLabel(frame, "Celcius");
-        createTxtField(frame, 20);
+        _fahrenheitLabel = new JLabel("Fahrenheit: ");
+        _fahrenheitTextField = new JTextField(5);
+        _fahrenheitTextField.setText("0");
         
-        createLabel(frame, "Fahrenheit");
-        createTxtField(frame, 20);
-    }
-    
-    public void createLabel(Frame frame, String labelName) {
-        frame.add(new Label(labelName));
-    }
-    
-    public void createTxtField(Frame frame, int size) {
-        TextField  field = new TextField(size);
-        frame.add(field); 
-        createButton(frame, "Enter", field);
-    }
-    
-    public void createButton(Frame frame, String btnName, TextField field) {
-        Button submitbtn = new Button(btnName);
-        submitbtn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println(Integer.parseInt(field.getText()));
+        _optionLabel = new JLabel("Option: ");
+        _optionTextField = new JTextField(5);
+        _optionTextField.setText("1");
+        
+        _convertBtn = new JButton("Convert");
+        
+        // added celcius
+        container.add(_celciusLabel);
+        container.add(_celciusTextField);
+        
+        // added fahrenheit
+        container.add(_fahrenheitLabel);
+        container.add(_fahrenheitTextField);
+        
+        // added option
+        container.add(_optionLabel);
+        container.add(_optionTextField);
+        
+        // added convert button 
+        container.add(_convertBtn);
+        
+        // choosing option
+        _convertBtn.addActionListener((ActionEvent e) -> {
+            switch(Integer.parseInt(_optionTextField.getText())) {
+                case 1:
+                    convertToCelcius(Integer.parseInt(_fahrenheitTextField.getText()));
+                    break;
+                case 2:
+                    convertToFahrenheit(Integer.parseInt(_celciusTextField.getText()));
+                    break;
+                default:
+                    System.out.println("Invalid input");
             }
         });
-        frame.add(submitbtn);
+     
+        // set all the components visible in frame
+        container.setVisible(true);
+          
     }
     
+<<<<<<< HEAD
     public static void main(String[] args) {
         
         @SuppressWarnings("resource")
@@ -67,5 +101,21 @@ public class TemperatureConversion {
         System.out.print("Enter the height of the frame: ");
         int height = scan.nextInt();
         new TemperatureConversion(width, height).createFrame();
+=======
+    public static void convertToCelcius(int v) {
+        System.out.println(v);
+>>>>>>> b9f3db9d835ae5b361373638c6e4ea2702878ec1
+    }
+    
+    public static void convertToFahrenheit (int m) {
+        System.out.println(m);
+    }
+    
+}
+
+class run {
+    public static void main(String[] args) {
+        new TemperatureConversion();
     }
 }
+
