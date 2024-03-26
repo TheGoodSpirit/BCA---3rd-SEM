@@ -24,6 +24,7 @@ public class TemperatureConversion {
         
         frame.setSize(_width, _height);
         frame.setVisible(true);
+        frame.setTitle("TemperatureConversion");
         frame.setLayout(new FlowLayout());
         
         createLabel(frame, "Celcius");
@@ -56,7 +57,8 @@ public class TemperatureConversion {
     
     public static void main(String[] args) {
         
-        Scanner scan = new Scanner(System.in);
+        @SuppressWarnings("resource")
+		Scanner scan = new Scanner(System.in);
         
         // ========== Tep4reatureConversion (AWT) ==========
         System.out.println("\n========== TepreatureConversion (AWT) ==========\n");
