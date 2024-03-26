@@ -62,15 +62,7 @@ public class Run_Main {
                 int age = scan.nextInt();
                 new VotingSystem(age).check();
                 break;
-            
-            case 4:
-                // ========== Tep4reatureConversion (AWT) ==========
-                System.out.println("\n========== TepreatureConversion (AWT) ==========\n");
-                System.out.print("Enter the width of the frame: ");
-                int width = scan.nextInt();
-                System.out.print("Enter the height of the frame: ");
-                int height = scan.nextInt();
-                new TemperatureConversion(width, height);
+
         }
     }
 }
