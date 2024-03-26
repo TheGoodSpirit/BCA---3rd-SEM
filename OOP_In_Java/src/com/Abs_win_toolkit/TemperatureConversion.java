@@ -33,16 +33,14 @@ class TemperatureConversion {
         container.setSize(_WIDTH,_HEIGHT);
         container.setLayout(new FlowLayout());
         
-<<<<<<< HEAD
-        frame.setSize(_width, _height);
-        frame.setVisible(true);
-        frame.setTitle("TemperatureConversion");
-        frame.setLayout(new FlowLayout());
-=======
+
+        container.setSize(_WIDTH, _HEIGHT);
+        container.setTitle("TemperatureConversion");
+        container.setLayout(new FlowLayout());
+
         _celciusLabel = new JLabel("Celcius : ");
         _celciusTextField = new JTextField(5);
         _celciusTextField.setText("32");
->>>>>>> b9f3db9d835ae5b361373638c6e4ea2702878ec1
         
         _fahrenheitLabel = new JLabel("Fahrenheit: ");
         _fahrenheitTextField = new JTextField(5);
@@ -88,23 +86,9 @@ class TemperatureConversion {
           
     }
     
-<<<<<<< HEAD
-    public static void main(String[] args) {
-        
-        @SuppressWarnings("resource")
-		Scanner scan = new Scanner(System.in);
-        
-        // ========== Tep4reatureConversion (AWT) ==========
-        System.out.println("\n========== TepreatureConversion (AWT) ==========\n");
-        System.out.print("Enter the width of the frame: ");
-        int width = scan.nextInt();
-        System.out.print("Enter the height of the frame: ");
-        int height = scan.nextInt();
-        new TemperatureConversion(width, height).createFrame();
-=======
+    
     public static void convertToCelcius(int v) {
         System.out.println(v);
->>>>>>> b9f3db9d835ae5b361373638c6e4ea2702878ec1
     }
     
     public static void convertToFahrenheit (int m) {
