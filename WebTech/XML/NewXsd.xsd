@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- restriction -->
+    <xs:simpleType name="namefield">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="20" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailAddress">
+        <xs:restriction base="xs:string" />
+    </xs:simpleType>
+
+    <!-- schema atructure -->
+    <xs:complexType name="college">
+        <xs:sequence>
+            <xs:element name="name" type="namefield" />
+            <xs:element name="address" type="namefield" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="address">
+        <xs:sequence>
+            <xs:element name="temporary" type="namefield" />
+            <xs:element name="permanent" type="namefield" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="student">
+        <xs:sequence>
+            <xs:element name="Id" type="xs:integer" />
+            <xs:element name="name" type="namefield" />
+            <xs:element name="age" type="xs:integer" />
+            <xs:element name="department" type="namefield" />
+            <xs:element name="email" type="emailAddress" />
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema> 

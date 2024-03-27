@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE college SYSTEM "NewDTD.dtd">
-<college>
+
+<xs:college xmlns:xs="https://www.example03.com" xs:noNamespaceSchemaLocation="./NewXsd.xsd">
     <name>Butwal Kalika Campus</name>
-    <address>Ramnagar,Rupandehi</address>
     <student>
         <Id>2345678901</Id>
         <name>Manish Ghimire</name>
         <age>21</age>
         <department>Computer Science and Technology</department>
         <email>example@gmail.com</email>
-        <address>Devinagar</address>
+        <address>
+            <temporary>Devinagar</temporary>
+            <permanent>Triveni</permanent>
+        </address>
     </student>
-</college>
+</xs:college>
