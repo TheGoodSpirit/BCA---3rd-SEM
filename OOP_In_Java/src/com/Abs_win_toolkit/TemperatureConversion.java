@@ -6,36 +6,28 @@ import javax.swing.*;
 
 class TemperatureConversion {
     
-    // Convert utton
+    // Convert button
     private final JButton _convertBtn;
     
     // declaring Labels
     private final JLabel _optionLabel;
     private final JLabel _celciusLabel; 
-    private final  JLabel _fahrenheitLabel;
+    private final JLabel _fahrenheitLabel;
     
     // declaring TextFields
-    private final  JTextField _optionTextField;
-    private final  JTextField _celciusTextField;
+    private final JTextField _optionTextField;
+    private final JTextField _celciusTextField;
     private final JTextField _fahrenheitTextField;
     
     // Defining constant values
     private final int _WIDTH = 350;
     private final int _HEIGHT = 250;
-    private final int _OFFSET = 32;
-    private final double _toCelcius = 5/9;
-    private final double _toFahrenheit = 9/5;
     
     // Constructor
     public TemperatureConversion() {
         
         JFrame container = new JFrame("TemperatureConversion");
         container.setSize(_WIDTH,_HEIGHT);
-        container.setLayout(new FlowLayout());
-        
-
-        container.setSize(_WIDTH, _HEIGHT);
-        container.setTitle("TemperatureConversion");
         container.setLayout(new FlowLayout());
 
         _celciusLabel = new JLabel("Celcius : ");
@@ -87,14 +79,15 @@ class TemperatureConversion {
     }
     
     
-    public static void convertToCelcius(int v) {
-        System.out.println(v);
+    public static void convertToCelcius(int fahrenheit) {
+        double celcius = (fahrenheit - 32) * 5.0 / 9.0;
+        System.out.println("Converted to Celcius: " + celcius);
     }
     
-    public static void convertToFahrenheit (int m) {
-        System.out.println(m);
+    public static void convertToFahrenheit (int celcius) {
+        double fahrenheit = (celcius * 9.0 / 5.0) + 32;
+        System.out.println("Converted to Fahrenheit: " + fahrenheit);
     }
-    
 }
 
 class run {
@@ -102,4 +95,3 @@ class run {
         new TemperatureConversion();
     }
 }
-
