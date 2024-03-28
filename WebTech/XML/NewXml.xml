@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<xs:college xmlns:xs="https://www.example03.com" xs:noNamespaceSchemaLocation="./NewXsd.xsd">
+<college>
     <name>Butwal Kalika Campus</name>
     <student>
         <Id>2345678901</Id>
@@ -13,4 +12,4 @@
             <permanent>Triveni</permanent>
         </address>
     </student>
-</xs:college>
+</college>

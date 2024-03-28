@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <!-- restriction -->
+    <!-- Restriction -->
     <xs:simpleType name="namefield">
         <xs:restriction base="xs:string">
-            <xs:maxLength value="20" />
+            <xs:maxLength value="50" />
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="emailAddress">
-        <xs:restriction base="xs:string" />
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+" />
+        </xs:restriction>
     </xs:simpleType>
 
-    <!-- schema atructure -->
-    <xs:complexType name="college">
-        <xs:sequence>
-            <xs:element name="name" type="namefield" />
-            <xs:element name="address" type="namefield" />
-        </xs:sequence>
-    </xs:complexType>
+    <!-- Schema Structure -->
+    <xs:element name="college">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="namefield" />
+                <xs:element name="student" type="student" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
 
     <xs:complexType name="address">
         <xs:sequence>
@@ -34,7 +38,7 @@
             <xs:element name="age" type="xs:integer" />
             <xs:element name="department" type="namefield" />
             <xs:element name="email" type="emailAddress" />
+            <xs:element name="address" type="address" />
         </xs:sequence>
     </xs:complexType>
-
-</xs:schema> 
+</xs:schema>
