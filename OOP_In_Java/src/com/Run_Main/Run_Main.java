@@ -62,6 +62,9 @@ public class Run_Main {
                 int age = scan.nextInt();
                 new VotingSystem(age).check();
                 break;
+                
+            case 4:
+            	new TemperatureConversion();    
         }
     }
 }

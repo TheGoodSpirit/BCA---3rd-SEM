@@ -4,7 +4,7 @@ import java.awt.FlowLayout;
 import java.awt.event.*;
 import javax.swing.*;
 
-class TemperatureConversion {
+public class TemperatureConversion {
     
     // Convert button
     private final JButton _convertBtn;
@@ -22,15 +22,12 @@ class TemperatureConversion {
     private static final JTextField _fahrenheitTextField = new JTextField(5);
     
     // Defining constant values
-    private final int _WIDTH = 350;
+    private final int _WIDTH = 300;
     private final int _HEIGHT = 150;
     
     // Constructor
     public TemperatureConversion() {
-        
-        // formatter
-        
-        
+       
         JFrame container = new JFrame("TemperatureConversion");
         container.setSize(_WIDTH,_HEIGHT);
         container.setLayout(new FlowLayout());
@@ -41,7 +38,7 @@ class TemperatureConversion {
         _fahrenheitLabel = new JLabel("Fahrenheit: ");
         _fahrenheitTextField.setText("98");
         
-        _optionLabel = new JLabel("Option: ");
+        _optionLabel = new JLabel("Convert to : ");
         _optionTextField = new JTextField(5);
         _optionTextField.setText("C");
         
@@ -68,10 +65,10 @@ class TemperatureConversion {
         _convertBtn.addActionListener((ActionEvent e) -> {
             switch(_optionTextField.getText()) {
                 case "C":
-                    convertToCelcius(Integer.parseInt(_fahrenheitTextField.getText()));
+                    convertToCelcius(Double.parseDouble(_fahrenheitTextField.getText()));
                     break;
                 case "F":
-                    convertToFahrenheit(Integer.parseInt(_celciusTextField.getText()));
+                    convertToFahrenheit(Double.parseDouble(_celciusTextField.getText()));
                     break;
                 default:
                     System.out.println("Invalid input");
@@ -82,25 +79,22 @@ class TemperatureConversion {
         container.setVisible(true);
           
     }
-    
-    
-    public static void convertToCelcius(int fahrenheit) {
+ 
+    public static void convertToCelcius(Double fahrenheit) {
         double celcius = (fahrenheit - 32) * 5.0 / 9.0;
-         _celciusTextField.setText(String.valueOf(String.format("%.2f", Double.valueOf(celcius))));
-        System.out.println("Converted to Celcius: " + celcius);
+         _celciusTextField.setText(String.format("%.2f", Double.valueOf(celcius)));
+        System.out.println("Converted to Celcius: " + _celciusTextField.getText());
     }
     
-    public static void convertToFahrenheit (int celcius) {
+    public static void convertToFahrenheit (Double celcius) {
         double fahrenheit =(celcius * 9.0 / 5.0) + 32;
-        _fahrenheitTextField.setText(String.valueOf(String.format("%.2f", Double.valueOf(fahrenheit))));
-        System.out.println("Converted to Fahrenheit: " + fahrenheit);
-    }
-    
-    public static void main(String[] args) {
-        new TemperatureConversion();
+        _fahrenheitTextField.setText(String.format("%.2f", Double.valueOf(fahrenheit)));
+        System.out.println("Converted to Fahrenheit: " + _fahrenheitTextField.getText());
     }
 }
-//
-//class run {
-//    
-//}
+
+class run {
+	 public static void main(String[] args) {
+	        new TemperatureConversion();
+	    }
+}
